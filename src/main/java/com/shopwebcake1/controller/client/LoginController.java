@@ -21,7 +21,7 @@ public class LoginController extends HttpServlet {
 
 		HttpSession session = req.getSession(false);
 		if (session != null && session.getAttribute("account") != null) {
-			resp.sendRedirect(req.getContextPath() + "/waiting");
+			resp.sendRedirect(req.getContextPath() + "/trangchu");
 			return;
 		}
 		// Check cookie
@@ -31,7 +31,7 @@ public class LoginController extends HttpServlet {
 				if (cookie.getName().equals("username")) {
 					session = req.getSession(true);
 					session.setAttribute("username", cookie.getValue());
-					resp.sendRedirect(req.getContextPath() + "/waiting");
+					resp.sendRedirect(req.getContextPath() + "/trangchu");
 					return;
 				}
 			}
@@ -43,7 +43,6 @@ public class LoginController extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		String userName = req.getParameter("userName");
-
 		String password = req.getParameter("password");
 		boolean isRememberMe = false;
 		String remember = req.getParameter("remember");
@@ -67,8 +66,13 @@ public class LoginController extends HttpServlet {
 			if (isRememberMe) {
 				saveRemeberMe(resp, userName);
 			}
+			if (user.getRoleId()==1) {
+				resp.sendRedirect(req.getContextPath() + "/admin-trangchu");
+			}else {
+				resp.sendRedirect(req.getContextPath() + "/trangchu");
+			}
 
-			resp.sendRedirect(req.getContextPath() + "/waiting");
+			
 		} else {
 			alertMsg = "Tên đăng nhập hoặc mật khẩu không đúng!";
 			req.setAttribute("alert", alertMsg);

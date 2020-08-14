@@ -1094,6 +1094,7 @@ ul.cart-list>li.total>.btn:hover {
 	margin: 0 auto;
 	text-align: center;
 	display: block;
+	height: 200px;
 }
 
 .type-lb {
@@ -3468,4 +3469,17 @@ opacity
 
 .img-home{
 	 width: 100%;
+}
+
+.blog{
+	width : 400px;
+}
+
+.tenCate{
+	color: #000000;
+	font-weight: 700;
+	text-transform: uppercase;
+	font-size: 14px;
+	
+	
 }

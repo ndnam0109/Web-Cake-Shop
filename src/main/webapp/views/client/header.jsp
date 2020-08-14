@@ -34,7 +34,7 @@
 						<div class="dangnhap-dangki">
 							<ul>
 								<li><i>${account.fullName }</i></li>
-								<li><a href="${pageContext.request.contextPath }/register">
+								<li><a href="${pageContext.request.contextPath }/logout">
 										Đăng xuất</a></li>
 							</ul>
 
@@ -76,7 +76,7 @@
 					aria-expanded="false" aria-label="Toggle navigation">
 					<i class="fa fa-bars"></i>
 				</button>
-				<a class="navbar-brand" ><img
+				<a class="navbar-brand"><img
 					src="template/client/images/logoshop.jpg" class="logo" alt=""></a>
 			</div>
 			<!-- End Header Navigation -->
@@ -87,33 +87,34 @@
 					data-out="fadeOutUp">
 					<li class="nav-item "><a class="nav-link"
 						href="${pageContext.request.contextPath }/trangchu">Trang chủ</a></li>
-					<li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath }/chungtoi">Chúng
-							tôi</a></li>
+					<li class="nav-item"><a class="nav-link"
+						href="${pageContext.request.contextPath }/chungtoi">Chúng tôi</a></li>
 					<li class="dropdown"><a href="#"
 						class="nav-link dropdown-toggle" data-toggle="dropdown-menu">Cửa
 							hàng</a>
 						<ul class="dropdown-menu">
 
 							<li><a
-								href="${pageContext.request.contextPath }/cake/category?categoryId=1">Bánh
+								href="${pageContext.request.contextPath }/category?categoryId=1">Bánh
 									ngọt</a></li>
 							<li><a
-								href="${pageContext.request.contextPath }/cake/category?categoryId=2">Bánh
+								href="${pageContext.request.contextPath }/category?categoryId=2">Bánh
 									mặn</a></li>
 							<li><a
-								href="${pageContext.request.contextPath }/cake/category?categoryId=3">Bánh
+								href="${pageContext.request.contextPath }/category?categoryId=3">Bánh
 									trái cây</a></li>
 							<li><a
-								href="${pageContext.request.contextPath }/cake/category?categoryId=4">Bánh
+								href="${pageContext.request.contextPath }/category?categoryId=4">Bánh
 									kem</a></li>
 							<li><a
-								href="${pageContext.request.contextPath }/cake/category?categoryId=5">Bánh
+								href="${pageContext.request.contextPath }/category?categoryId=5">Bánh
 									pizza</a></li>
 							<li><a
-								href="${pageContext.request.contextPath }/cake/category?categoryId=6">Bánh
+								href="${pageContext.request.contextPath }/category?categoryId=6">Bánh
 									Crepe</a></li>
 						</ul></li>
-					<li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath }/blog">Blog</a></li>
+					<li class="nav-item"><a class="nav-link"
+						href="${pageContext.request.contextPath }/blog">Blog</a></li>
 					<li class="nav-item"><a class="nav-link"
 						href="${pageContext.request.contextPath }/contact">liên hệ</a></li>
 				</ul>
@@ -123,12 +124,11 @@
 			<!-- Start Atribute Navigation -->
 			<div class="attr-nav">
 				<ul>
-					<li class="search"><a href="#"><i class="fa fa-search"></i></a></li>
-					<li class="side-menu"><a href="#">
-					 <c:forEach items="${cart}" var="cart1">
-					<c:set var="count" value="${count + cart1.value.quantity}" />
-					</c:forEach>
-					 <i	class="fa fa-shopping-bag"></i> <span class="badge">${count}</span>
+				
+					<li class="side-menu"><a href="#"> <c:forEach
+								items="${cart}" var="cart1">
+								<c:set var="count" value="${count + cart1.value.quantity}" />
+							</c:forEach> <i class="fa fa-shopping-bag"></i> <span class="badge">${count}</span>
 							<p>Giỏ Hàng</p>
 					</a></li>
 				</ul>
@@ -139,22 +139,24 @@
 			<a href="#" class="close-side"><i class="fa fa-times"></i></a>
 			<li class="cart-box">
 				<ul class="cart-list">
-				
-				<c:forEach var="cart1" items="${cart}">
-					<li><a href="#" class="photo"><img
-							src="template/client/images/img-pro-01.jpg" class="cart-thumb" alt="" /></a>
-						<h6>
-							<a href="#">${cart1.value.cake.cakeName } </a>
-						</h6>
-						<p>
-							${cart1.value.quantity }x - <span class="price">${cart1.value.cake.price }</span>
-						</p></li>
-						<c:set var="totalPrice" value="${totalPrice+ cart1.value.quantity*cart1.value.unitPrice}" />
+
+					<c:forEach var="cart1" items="${cart}">
+						<li><a href="#" class="photo"><img
+								src="${cart1.value.cake.thumbnail }" class="cart-thumb" alt="" /></a>
+							<h6>
+								<a href="#">${cart1.value.cake.cakeName } </a>
+							</h6>
+							<p>
+								${cart1.value.quantity }x - <span class="price">${cart1.value.cake.currencyPrice }</span>
+							</p></li>
+						<c:set var="totalPrice"
+							value="${totalPrice+cart1.value.quantity*cart1.value.cake.price}" />
 					</c:forEach>
-					
-					<li class="total"><a href="${pageContext.request.contextPath }/view-cart"
+
+					<li class="total"><a
+						href="${pageContext.request.contextPath }/view-cart"
 						class="btn btn-default hvr-hover btn-cart">Xem giỏ hàng</a> <span
-						class="float-right"><strong>Total</strong>: ${totalPrice }</span></li>
+						class="float-right"><strong>Total</strong>: ${total }</span>
 				</ul>
 			</li>
 		</div>

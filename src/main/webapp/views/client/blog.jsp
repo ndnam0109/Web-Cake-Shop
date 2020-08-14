@@ -50,83 +50,105 @@
 <body>
 
 
-<jsp:include page="header.jsp"></jsp:include>
+	<jsp:include page="header.jsp"></jsp:include>
 
-    <!-- Start Top Search -->
-    <div class="top-search">
-        <div class="container">
-            <div class="input-group">
-                <span class="input-group-addon"><i class="fa fa-search"></i></span>
-                <input type="text" class="form-control" placeholder="Search">
-                <span class="input-group-addon close-search"><i class="fa fa-times"></i></span>
-            </div>
-        </div>
-    </div>
-    <!-- End Top Search -->
+	<!-- Start Top Search -->
+	<div class="top-search">
+		<div class="container">
+			<div class="input-group">
+				<span class="input-group-addon"><i class="fa fa-search"></i></span>
+				<input type="text" class="form-control" placeholder="Search">
+				<span class="input-group-addon close-search"><i
+					class="fa fa-times"></i></span>
+			</div>
+		</div>
+	</div>
+	<!-- End Top Search -->
 
-    <!-- Start All Title Box -->
-    <div class="all-title-box">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h2>BLOG</h2>
-                    <ul class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item active">BLOG</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End All Title Box -->
+	<!-- Start All Title Box -->
+	<div class="all-title-box">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<h2>BLOG</h2>
+					<ul class="breadcrumb">
+						<li class="breadcrumb-item"><a href="#">Home</a></li>
+						<li class="breadcrumb-item active">BLOG</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End All Title Box -->
 
-    <!-- Start About Page  -->
-    <div class="about-box-main">
-        <div class="container">
-            <div class="row">
+	<!-- Start About Page  -->
+	<div class="about-box-main">
+		<div class="container">
+			<div class="row">
 				<div class="col-lg-6">
-                    <div class="banner-frame"> <img class="img-fluid" src="template/client/images/blog1.jpg" alt="" />
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <h2 class="noo-sh-title-top">We are <span>Freshshop</span></h2>
-                    <p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
-                        voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,
-                        sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?
-                        Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-					<a class="btn hvr-hover" href="#">Read More</a>
-					  <hr>
-                </div>
-             
-            </div>
-            
-            
-             <div class="row ">
+					<div class="banner-frame ">
+						<img class="img-fluid blog "  src="template/client/images/blog1.jpg"
+							alt="" />
+					</div>
+				</div>
 				<div class="col-lg-6">
-                    <div class="banner-frame"> <img class="img-fluid" src="template/client/images/blog2.jpg" alt="" />
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <h2 class="noo-sh-title-top">We are <span>Freshshop</span></h2>
-                    <p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
-                        voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,
-                        sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?
-                        Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+					<h2 class="noo-sh-title-top">
+						We are <span>Cakeshop</span>
+					</h2>
+					<p>Sau hơn một tuần vắng nhà, cuối tuần vừa rồi mới lại được
+						vào bếp nghịch bột trứng, đợi bánh nở, và hí húi với đống dụng cụ
+						để chụp ảnh. Cảm giác thật tuyệt! Vừa háo hức như gặp lại bạn cũ,
+						vừa có cảm giác mới mẻ là lạ, giống như mới được “sạc” thêm năng
+						lượng và cảm hứng vậy ^.^ Hơn một tuần không được ăn bánh, thấy
+						“thiếu thốn” nhiều nên có đứa tham ăn làm một lúc hai loại bánh
+						khác nhau: Japanese cotton cheesecake để thỏa mãn cái sự nhớ nhung
+						vị ngậy béo, mềm xốp của bánh gateau pho-mát và Hokkaido chiffon
+						cupcakes để tận hưởng sự mềm mại mịn màng trong từng thớ bánh nhỏ.</p>
 					<a class="btn hvr-hover" href="#">Read More</a>
-                </div>
-                 <hr class="my-0"> 
-            </div>
-           
-        </div>
-    </div>
-    <!-- End About Page -->
+					<hr>
+				</div>
 
-    
+			</div>
 
 
-<jsp:include page="footer.jsp"></jsp:include>
+			<div class="row ">
+				<div class="col-lg-6">
+					<div class="banner-frame ">
+						<img class="img-fluid blog" src="template/client/images/blog2.jpg"
+							alt="" />
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<h2 class="noo-sh-title-top">
+						We are <span>Cakeshop</span>
+					</h2>
+					<p>Món bánh thứ hai – Hokkaido chiffon cupcakes – được làm từ
+						gợi ý của một số bạn tại Savoury Days. Mình khá là tò mò về xuất
+						xứ của món bánh này. Vì thường các loại bánh có thêm “nhãn”
+						Hokkaido là do được làm với sữa Hokkaido, vốn là một loại sữa ngon
+						nổi tiếng. Nhưng Hokkaido chiffon cupcakes thì hình như chẳng có
+						liên quan gì mấy. Bánh gồm một cốt bánh Chiffon với phần kem
+						Custard trộn whipped cream thơm ngậy bên trong. Tuy không có gì
+						mới mẻ nhưng đây là một sự kết hợp tuyệt vời, mà chắc cả trẻ con
+						lẫn “trẻ nhớn” ai cũng sẽ thích cả. Cupcake của mình ngoài phần
+						nhân custard có thêm cả kem tươi đánh bông và dâu tây nữa. Cá nhân
+						mình thì thích có thêm kem tươi hơn, vì giữ được độ ẩm cho bánh,
+						lại rất hợp với phần chiffon và kem custard. Nhưng nếu bạn nào
+						ngại ngấy thì có thể bỏ qua hoặc thay whipping cream bằng topping
+						cream nhé.</p>
+					<a class="btn hvr-hover" href="#">Read More</a>
+				</div>
+				<hr>
+			</div>
+
+		</div>
+	</div>
+	<!-- End About Page -->
+
+
+
+
+	<jsp:include page="footer.jsp"></jsp:include>
 
 	<!-- ALL JS FILES -->
 	<script src="<c:url value='/template/client/js/jquery-3.2.1.min.js'/>">

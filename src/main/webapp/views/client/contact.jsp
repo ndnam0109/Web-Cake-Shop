@@ -142,10 +142,7 @@
 				<div class="col-lg-4 col-sm-12">
 					<div class="contact-info-left">
 						<h2>Thông tin liên hệ</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-							Praesent urna diam, maximus ut ullamcorper quis, placerat id
-							eros. Duis semper justo sed condimentum rutrum. Nunc tristique
-							purus turpis. Maecenas vulputate.</p>
+						
 						<ul>
 							<li>
 								<p>

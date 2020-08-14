@@ -16,7 +16,7 @@ import com.shopwebcake1.model.Category;
 import com.shopwebcake1.service.impl.CakeService;
 import com.shopwebcake1.service.impl.CategoryService;
 
-@WebServlet(urlPatterns="/cake/category")
+@WebServlet(urlPatterns="/category")
 
 public class CakeSearchByCategory extends HttpServlet {
 	@Override
@@ -26,19 +26,28 @@ public class CakeSearchByCategory extends HttpServlet {
 		List<Category> list = new ArrayList<Category>();
 		
 		list =  categoryService.getAll();
-		 req.setAttribute("category", list );
+		 req.setAttribute("category", list );// Lấy ra list cate và set vào sission
 		 
 			
 		 String categoryId=req.getParameter("categoryId");
 		 int cate =  Integer.parseInt(categoryId);
-			List<Cake> cakeSearchByCategory =cakeService.searchByCategory(cate);
+		 
+		 Category category = categoryService.get(cate);
+		 String tenCate = category.getName();
+		 req.setAttribute("tenCate", tenCate);
+		
+			List<Cake> cakeSearchByCategory =cakeService.searchByCategory(cate); //Lấy listcake bằng categoryId
 			
-			for (Cake e :cakeSearchByCategory ) {
-				System.out.println(e);
+		
+
+			for (Cake cake : cakeSearchByCategory ) {
+				String curPrice =  cakeService.currencyPrice(cake.getPrice());
+				cake.setCurrencyPrice(curPrice);	//Định dạng tiền tệ
+				
 			}
+		
 			
-			
-			req.setAttribute("cakeSeachByCategory", cakeSearchByCategory);
+			req.setAttribute("cakeSearchByCategory", cakeSearchByCategory);
 					
 		req.getRequestDispatcher("/views/client/CakeSearchByCategory.jsp").forward(req, resp);
 		

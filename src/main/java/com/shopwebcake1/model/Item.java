@@ -6,8 +6,11 @@ public class Item {
 	private int quantity;
 	private long unitPrice;
 	private Cart cart;
+	private String currencyPrice;
 	
 	
+
+
 	public Item() {
 		super();
 	}
@@ -21,6 +24,17 @@ public class Item {
 		this.unitPrice = unitPrice;
 		this.cart = cart;
 	}
+
+	public Item(int id, Cake cake, int quantity, long unitPrice, Cart cart, String currencyPrice) {
+		super();
+		this.id = id;
+		this.cake = cake;
+		this.quantity = quantity;
+		this.unitPrice = unitPrice;
+		this.cart = cart;
+		this.currencyPrice = currencyPrice;
+	}
+
 
 
 	public int getId() {
@@ -54,5 +68,13 @@ public class Item {
 		this.cart = cart;
 	}
 
+	public String getCurrencyPrice() {
+		return currencyPrice;
+	}
+
+
+	public void setCurrencyPrice(String currencyPrice) {
+		this.currencyPrice = currencyPrice;
+	}
 	
 }

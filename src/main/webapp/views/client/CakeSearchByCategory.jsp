@@ -85,7 +85,11 @@
 					class="col-xl-9 col-lg-9 col-sm-12 col-xs-12 shop-content-right">
 					<div class="right-product-box">
 						<div class="product-item-filter row">
-							<div class="col-12 col-sm-8 text-center text-sm-left"></div>
+							<div class="col-12 col-sm-8 text-center text-sm-left">
+							<div class="tenCate">
+								<h3>${tenCate }</h3>
+							</div>
+							</div>
 							<div class="col-12 col-sm-4 text-center text-sm-right">
 								<ul class="nav nav-tabs ml-auto">
 									<li><a class="nav-link active" href="#grid-view"
@@ -103,7 +107,7 @@
 								<div role="tabpanel" class="tab-pane fade show active"
 									id="grid-view">
 									<div class="row">
-										<c:forEach var="cake" items="${cakeSeachByCategory}">
+										<c:forEach var="cake" items="${cakeSearchByCategory}">
 											<div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
 												<div class="products-single fix">
 													<div class="box-img-hover">
@@ -115,7 +119,7 @@
 															alt="image">
 														<div class="mask-icon">
 															<ul>
-																<li><a href="#" data-toggle="tooltip"
+																<li><a href="${pageContext.request.contextPath }/cake-detail?cakeId=${cake.cakeId}" data-toggle="tooltip"
 																	data-placement="right" title="View"><i
 																		class="fas fa-eye"></i></a></li>
 																<li><a href="#" data-toggle="tooltip"
@@ -123,12 +127,12 @@
 																		class="fas fa-sync-alt"></i></a></li>
 
 															</ul>
-															<a class="cart" href="${pageContext.request.contextPath }/add-to-cart?cakeId=${cake.cakeId}">Thêm vào giỏ</a>
+															<a class="cart" href="${pageContext.request.contextPath }/add-to-cart?cakeId=${cake.cakeId}&quantity=1">Thêm vào giỏ</a>
 														</div>
 													</div>
 													<div class="why-text">
 														<h4>${cake.cakeName }</h4>
-														<h5>${cake.price }vnđ</h5>
+														<h5>${cake.currencyPrice }</h5>
 													</div>
 												</div>
 											</div>
@@ -140,7 +144,7 @@
 								<div role="tabpanel" class="tab-pane fade" id="list-view">
 									<div class="list-view-box">
 										<div class="row">
-											<c:forEach var="cake" items="${cakeSeachByCategory}">
+											<c:forEach var="cake" items="${cakeSearchByCategory}">
 
 												<div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
 													<div class="products-single fix">
@@ -153,7 +157,7 @@
 																alt="image">
 															<div class="mask-icon">
 																<ul>
-																	<li><a href="#" data-toggle="tooltip"
+																	<li><a href="${pageContext.request.contextPath }/cake-detail?cakeId=${cake.cakeId}" data-toggle="tooltip"
 																		data-placement="right" title="View"><i
 																			class="fas fa-eye"></i></a></li>
 																	<li><a href="#" data-toggle="tooltip"
@@ -169,9 +173,9 @@
 												<div class="col-sm-6 col-md-6 col-lg-8 col-xl-8">
 													<div class="why-text full-width">
 														<h4>${cake.cakeName}</h4>														
-														<h5>${cake.price }</h5>
+														<h5>${cake.currencyPrice }</h5>
 														<p>${cake.content }</p>
-														<a class="btn hvr-hover" href="${pageContext.request.contextPath }/add-to-cart?cakeId=${cake.cakeId}">Thêm vào giỏ</a>
+														<a class="btn hvr-hover cart" href="${pageContext.request.contextPath }/add-to-cart?cakeId=${cake.cakeId}">Thêm vào giỏ</a>
 													</div>
 												</div>
 											</c:forEach>
@@ -194,7 +198,7 @@
 									class="list-group list-group-collapse list-group-sm list-group-tree"
 									id="list-group-men" data-children=".sub-men">
 									<a
-										href="${pageContext.request.contextPath }/cake/category?categoryId=${cate.categoryId}"
+										href="${pageContext.request.contextPath }/category?categoryId=${cate.categoryId}"
 										class="list-group-item list-group-item-action">
 										${cate.name} </a>
 								</div>

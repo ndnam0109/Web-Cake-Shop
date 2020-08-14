@@ -10,6 +10,8 @@ public interface ICakeService {
 	void edit(Cake cake);
 
 	void delete(int id);
+	
+	public String currencyPrice(long price);
 
 	Cake get(int id);
 

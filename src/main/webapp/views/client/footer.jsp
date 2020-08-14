@@ -9,7 +9,8 @@
 			<div class="ins-inner-box">
 				<img src="template/client/images/instagram-img-01.jpg" alt="" />
 				<div class="hov-in">
-					<a href="https://www.instagram.com/namnguyen.0109/"><i class="fab fa-instagram"></i></a>
+					<a href="https://www.instagram.com/namnguyen.0109/"><i
+						class="fab fa-instagram"></i></a>
 				</div>
 			</div>
 		</div>
@@ -17,7 +18,8 @@
 			<div class="ins-inner-box">
 				<img src="template/client/images/instagram-img-02.jpg" alt="" />
 				<div class="hov-in">
-					<a href="https://www.instagram.com/namnguyen.0109/"><i class="fab fa-instagram"></i></a>
+					<a href="https://www.instagram.com/namnguyen.0109/"><i
+						class="fab fa-instagram"></i></a>
 				</div>
 			</div>
 		</div>
@@ -25,7 +27,8 @@
 			<div class="ins-inner-box">
 				<img src="template/client/images/instagram-img-03.jpg" alt="" />
 				<div class="hov-in">
-					<a href="https://www.instagram.com/namnguyen.0109/"><i class="fab fa-instagram"></i></a>
+					<a href="https://www.instagram.com/namnguyen.0109/"><i
+						class="fab fa-instagram"></i></a>
 				</div>
 			</div>
 		</div>
@@ -33,7 +36,8 @@
 			<div class="ins-inner-box">
 				<img src="template/client/images/instagram-img-04.jpg" alt="" />
 				<div class="hov-in">
-					<a href="https://www.instagram.com/namnguyen.0109/"><i class="fab fa-instagram"></i></a>
+					<a href="https://www.instagram.com/namnguyen.0109/"><i
+						class="fab fa-instagram"></i></a>
 				</div>
 			</div>
 		</div>
@@ -41,7 +45,8 @@
 			<div class="ins-inner-box">
 				<img src="template/client/images/instagram-img-05.jpg" alt="" />
 				<div class="hov-in">
-					<a href="https://www.instagram.com/namnguyen.0109/"><i class="fab fa-instagram"></i></a>
+					<a href="https://www.instagram.com/namnguyen.0109/"><i
+						class="fab fa-instagram"></i></a>
 				</div>
 			</div>
 		</div>
@@ -49,7 +54,8 @@
 			<div class="ins-inner-box">
 				<img src="template/client/images/instagram-img-06.jpg" alt="" />
 				<div class="hov-in">
-					<a href="https://www.instagram.com/namnguyen.0109/"><i class="fab fa-instagram"></i></a>
+					<a href="https://www.instagram.com/namnguyen.0109/"><i
+						class="fab fa-instagram"></i></a>
 				</div>
 			</div>
 		</div>
@@ -57,7 +63,8 @@
 			<div class="ins-inner-box">
 				<img src="template/client/images/instagram-img-07.jpg" alt="" />
 				<div class="hov-in">
-					<a href="https://www.instagram.com/namnguyen.0109/"><i class="fab fa-instagram"></i></a>
+					<a href="https://www.instagram.com/namnguyen.0109/"><i
+						class="fab fa-instagram"></i></a>
 				</div>
 			</div>
 		</div>
@@ -65,7 +72,8 @@
 			<div class="ins-inner-box">
 				<img src="template/client/images/instagram-img-08.jpg" alt="" />
 				<div class="hov-in">
-					<a href="https://www.instagram.com/namnguyen.0109/"><i class="fab fa-instagram"></i></a>
+					<a href="https://www.instagram.com/namnguyen.0109/"><i
+						class="fab fa-instagram"></i></a>
 				</div>
 			</div>
 		</div>
@@ -73,7 +81,8 @@
 			<div class="ins-inner-box">
 				<img src="template/client/images/instagram-img-09.jpg" alt="" />
 				<div class="hov-in">
-					<a href="https://www.instagram.com/namnguyen.0109/"><i class="fab fa-instagram"></i></a>
+					<a href="https://www.instagram.com/namnguyen.0109/"><i
+						class="fab fa-instagram"></i></a>
 				</div>
 			</div>
 		</div>
@@ -81,7 +90,8 @@
 			<div class="ins-inner-box">
 				<img src="template/client/images/instagram-img-05.jpg" alt="" />
 				<div class="hov-in">
-					<a href="https://www.instagram.com/namnguyen.0109/"><i class="fab fa-instagram"></i></a>
+					<a href="https://www.instagram.com/namnguyen.0109/"><i
+						class="fab fa-instagram"></i></a>
 				</div>
 			</div>
 		</div>
@@ -113,13 +123,12 @@
 									class="fab fa-facebook" aria-hidden="true"></i></a></li>
 							<li><a href="#"><i class="fab fa-twitter"
 									aria-hidden="true"></i></a></li>
-							<li><a
-								href="https://www.linkedin.com/in/nam-nguyen-3a02ab1b0/"><i
+							<li><a href="https://www.linkedin.com/in/ndnam0109"><i
 									class="fab fa-linkedin" aria-hidden="true"></i></a></li>
 
+							<li><a href="https://github.com/ndnam0109"><i
+									class="fab fa-github" aria-hidden="true"></i></a></li>
 
-							<li><a href="#"><i class="fab fa-pinterest-p"
-									aria-hidden="true"></i></a></li>
 							<li><a href="https://www.instagram.com/namnguyen.0109/"><i
 									class="fab fa-instagram" aria-hidden="true"></i></a></li>
 						</ul>

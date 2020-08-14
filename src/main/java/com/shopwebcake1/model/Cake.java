@@ -9,6 +9,7 @@ public class Cake implements Serializable {
 	private String content;
 	private  Category category;
 	private long price;
+	 private String currencyPrice;
 	
 	
 	public Cake() {
@@ -25,6 +26,26 @@ public class Cake implements Serializable {
 		this.category = category;
 		this.price = price;
 	}
+	
+	public Cake(int cakeId, String cakeName, String thumbnail, String content, Category category,
+			long price, String currencyPrice) {
+		super();
+		this.cakeId = cakeId;
+		this.cakeName = cakeName;
+		this.thumbnail = thumbnail;
+		this.content = content;
+		this.category = category;
+		this.price = price;
+		this.currencyPrice = currencyPrice;
+	}
+	public String getCurrencyPrice() {
+		return currencyPrice;
+	}
+
+	public void setCurrencyPrice(String currencyPrice) {
+		this.currencyPrice = currencyPrice;
+	}
+
 	public int getCakeId() {
 		return cakeId;
 	}
@@ -67,6 +88,10 @@ public class Cake implements Serializable {
 		// TODO Auto-generated method stub
 		return String.format("namecake: "+cakeName+"price: "+price+"thumbnail: "+thumbnail);
 	}
+	
+	
+	
+	
 	
 	
 }

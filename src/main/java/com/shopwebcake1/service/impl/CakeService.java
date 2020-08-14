@@ -57,4 +57,10 @@ public class CakeService extends JDBCConnection implements ICakeService {
 		return null;
 	}
 
+	@Override
+	public String currencyPrice(long price) {
+			
+		return cakeDao.currencyPrice(price);
+	}
+
 }

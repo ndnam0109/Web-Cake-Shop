@@ -3,8 +3,10 @@ package com.shopwebcake1.dao.impl;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 import com.shopwebcake1.dao.ICakeDao;
 import com.shopwebcake1.jdbc.JDBCConnection;
@@ -279,6 +281,15 @@ public class CakeDao extends JDBCConnection implements ICakeDao {
 	public List<Cake> searchByName(String cakeName) {
 		// TODO Auto-generated method stub
 		return null;
+	}
+
+	@Override
+	public String currencyPrice(long price) {
+		
+		Locale localeVN = new Locale("vi", "VN");
+	    NumberFormat currencyVN = NumberFormat.getCurrencyInstance(localeVN);
+	    String str1 = currencyVN.format(price);
+		return str1;
 	}
 
 }

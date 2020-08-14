@@ -1,6 +1,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <c:url value="template/admin" var="url"></c:url>
 <!DOCTYPE html>
 <html>
@@ -66,21 +66,21 @@
 										<tbody>
 										<c:forEach items="${proList }" var="pro" >
 											<tr class="odd gradeX">
-												<td>${pro.id }</td>
-													<c:url value="/image?fname=${pro.image }" var="imgUrl"></c:url>
-													<td><img height="150" width="200" src="${imgUrl}" /></td>
+												<td>${pro.cakeId }</td>
+													
+													<td><img height="150" width="200" src="${pro.thumbnail}" /></td>
 
-													<td>${pro.name }</td>
+													<td>${pro.cakeName }</td>
 												<td>${pro.price }</td>
 												<td>${pro.category.name }</td>
-												<td>${pro.des } </td>
+												<td>${pro.content } </td>
 												<td><a
-														href="<c:url value='/product/detail?id=${pro.id }'/>"
+														href="<c:url value='/product/detail?id=${pro.cakeId }'/>"
 														class="center">Detail</a> | <a
-														href="<c:url value='/admin/product/edit?id=${pro.id }'/>"
+														href="<c:url value='/admin/product/edit?id=${pro.cakeId }'/>"
 														class="center">Edit</a>
 														| <a
-														href="<c:url value='/admin/product/delete?id=${pro.id }'/>"
+														href="<c:url value='/admin/product/delete?id=${pro.cakeId }'/>"
 														class="center">Delete</a></td>
 												
 											</tr>

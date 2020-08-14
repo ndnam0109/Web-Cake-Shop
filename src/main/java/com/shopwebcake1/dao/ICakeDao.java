@@ -12,6 +12,8 @@ public interface ICakeDao {
 	void edit(Cake cake);
 
 	void delete(int id);
+	
+	String currencyPrice(long price);
 
 	Cake get(int id);
 

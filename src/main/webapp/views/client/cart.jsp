@@ -13,7 +13,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <!-- Site Metas -->
-<title>Cake Shop</title>
+<title>Cart</title>
 <meta name="keywords" content="">
 <meta name="description" content="">
 <meta name="author" content="">
@@ -90,32 +90,32 @@
 						<table class="table">
 							<thead>
 								<tr>
-									<th>Images</th>
-									<th>Product Name</th>
-									<th>Price</th>
-									<th>Quantity</th>
-									<th>Total</th>
-									<th>Remove</th>
+									<th>Bánh</th>
+									<th>Tên bánh</th>
+									<th>Giá</th>
+									<th>Số Lượng</th>
+									<th>Tổng</th>
+									<th>Xóa</th>
 								</tr>
 							</thead>
 							<tbody>
 								<c:forEach var="cart1" items="${cart}">
 									<tr>
 										<td class="thumbnail-img"><a href="#"> <img
-												class="img-fluid" src="images/img-pro-01.jpg" alt="" />
+												class="img-fluid" src="${cart1.value.cake.thumbnail }" alt="" />
 										</a></td>
 										<td class="name-pr"><a href="#"> ${cart1.value.cake.cakeName }
 												 </a></td>
 										<td class="price-pr">
-											<p>$ 80.0</p>
+											<p> ${cart1.value.cake.currencyPrice }</p>
 										</td>
 										<td class="quantity-box"><input type="number" size="4"
-											value="1" min="0" step="1" class="c-input-text qty text"></td>
+											value="${cart1.value.quantity }" min="0" step="1" class="c-input-text qty text"></td>
 										<td class="total-pr">
-											<p>$ 80.0</p>
+											<p>${cart1.value.currencyPrice }</p>
 										</td>
-										<td class="remove-pr"><a href="#"> <i
-												class="fas fa-times"></i>
+										<td class="remove-pr"><a href="${pageContext.request.contextPath }/remove-item?cakeId=${cart1.value.cake.cakeId}"> <i
+												class="fas fa-times "></i>
 										</a></td>
 									</tr>
 
@@ -131,17 +131,17 @@
 				<div class="col-lg-8 col-sm-12"></div>
 				<div class="col-lg-4 col-sm-12">
 					<div class="order-box">
-						<h3>Order summary</h3>
+						<h3>Order </h3>
 
 						<div class="d-flex gr-total">
-							<h5>Grand Total</h5>
-							<div class="ml-auto h5">$ 388</div>
+							<h5>Tổng thanh toán</h5>
+							<div class="ml-auto h5">${total }</div>
 						</div>
 						<hr>
 					</div>
 				</div>
 				<div class="col-12 d-flex shopping-box">
-					<a href="checkout.html" class="ml-auto btn hvr-hover">Checkout</a>
+					<a href="${pageContext.request.contextPath }/checkout" class="ml-auto btn hvr-hover">Đặt hàng</a>
 				</div>
 			</div>
 
