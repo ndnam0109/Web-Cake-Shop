@@ -2,9 +2,9 @@
 
 ### E-Commerce Website : Website that displays and sells pastry products.
 
- -    *Written in java java programming language , JSP/Servlet.*
+ -    *Written in `Java` programming language , JSP/Servlet.*
 
 
- - *Built according MVC pattern.*
+ - *Built according `MVC` pattern.*
 
- - *Apply  SOLID design principle in project construction.*
+ - *Apply  `SOLID` design principle in project construction.*
