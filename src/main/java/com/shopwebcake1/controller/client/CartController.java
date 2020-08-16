@@ -24,6 +24,8 @@ public class CartController extends HttpServlet {
 		Object obj = httpSession.getAttribute("cart"); //Lay map tu session
 		Map<Integer, Item> map = (Map<Integer, Item>) obj;
 		
+		
+		//Định dạng tiền tệ các item trong map
 		Set set = map.keySet();
 		for (Object key : set) {
          

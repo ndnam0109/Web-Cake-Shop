@@ -26,42 +26,40 @@ public class CartAddController extends HttpServlet {
 		HttpSession httpSession = req.getSession();
 		Object obj = httpSession.getAttribute("cart");
 		CurrencyPrice currencyPrice = new CurrencyPrice();
-	
-		if (obj == null) {
-			Map<Integer, Item> map = new HashMap<Integer, Item>();
 
-			String cakeId = req.getParameter("cakeId");
-			String stringQuantity = req.getParameter("quantity");
-			System.out.println(stringQuantity);
+		if (obj == null) {
+			Map<Integer, Item> map = new HashMap<Integer, Item>(); // Nếu giỏ hàng = null thì tạo mới một obj giỏ hàng
+
+			String cakeId = req.getParameter("cakeId");  
+			String stringQuantity = req.getParameter("quantity"); //Lấy cakeId và quantity từ req
+			
 			int quantity = Integer.parseInt(stringQuantity);
-			Cake cake = cakeService.get(Integer.parseInt(cakeId));
-			cake.setCurrencyPrice(cakeService.currencyPrice(cake.getPrice()));
+			Cake cake = cakeService.get(Integer.parseInt(cakeId)); //Lấy cake từ cakeId
+			cake.setCurrencyPrice(cakeService.currencyPrice(cake.getPrice())); // Định dạng tiền tệ
 			Item item = new Item();
 			item.setQuantity(quantity);
 			item.setUnitPrice(quantity * cake.getPrice());
-			
+
 			// Set totalPrice
 			long total = 0;
 			total = total + item.getUnitPrice();
 			Cart cart = new Cart();
 			cart.setTotalPrice(total);
 			item.setCake(cake);
-			
 
+			
+			//THêm cake vào giỏ hàng
 			map.put(item.getCake().getCakeId(), item);
 
 			httpSession.setAttribute("quantity", quantity);
-			httpSession.setAttribute("cartPrice",cart );
+			httpSession.setAttribute("cartPrice", cart);
 			httpSession.setAttribute("cart", map);
-			
-	
-			
+
 			String stringTotal = currencyPrice.curPrice(total);
-			httpSession.setAttribute("total", stringTotal);
-		
+			httpSession.setAttribute("total", stringTotal); //set thông tin vào session
 
 		} else {
-			Map<Integer, Item> map = (Map<Integer, Item>) obj;
+			Map<Integer, Item> map = (Map<Integer, Item>) obj; // Giỏ hàng k null thì cast về dạng Map
 
 			String cakeId = req.getParameter("cakeId");
 			String stringQuantity = req.getParameter("quantity");
@@ -74,9 +72,9 @@ public class CartAddController extends HttpServlet {
 			item.setUnitPrice(quantity * cake.getPrice());
 			item.setCake(cake);
 
-			Item existedCartItem = map.get(Integer.valueOf(cakeId));//Lay item co key la cakeId trong map
+			Item existedCartItem = map.get(Integer.valueOf(cakeId));// Lay item co key la cakeId trong map
 
-			//update map
+			// update map
 			if (existedCartItem == null) {
 				map.put(item.getCake().getCakeId(), item);
 			} else {
@@ -85,18 +83,15 @@ public class CartAddController extends HttpServlet {
 				existedCartItem.setCurrencyPrice(currencyPrice.curPrice(existedCartItem.getUnitPrice()));
 			}
 
-			
-			httpSession.setAttribute("cart", map); //set map vao session
-			
+			httpSession.setAttribute("cart", map); // set map vao session
 
-			Cart cart =  (Cart) httpSession.getAttribute("cartPrice");
-			 long totalPrice = cart.getTotalPrice(); 
-	
-			
+			Cart cart = (Cart) httpSession.getAttribute("cartPrice");
+			long totalPrice = cart.getTotalPrice();
+
 			totalPrice = totalPrice + item.getUnitPrice();
 			cart.setTotalPrice(totalPrice);
 			httpSession.setAttribute("cart", map);
-			
+
 			String stringTotal = currencyPrice.curPrice(totalPrice);
 			httpSession.setAttribute("total", stringTotal);
 

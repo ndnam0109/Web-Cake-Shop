@@ -22,9 +22,9 @@ public class CheckoutController extends HttpServlet {
 		Object obj = httpSession.getAttribute("cart"); //Lay map tu session
 		Map<Integer, Item> map = (Map<Integer, Item>) obj;
 		
+		//Định dạn tiền tệ
 		Set set = map.keySet();
 		for (Object key : set) {
-         
           CurrencyPrice curPrice = new CurrencyPrice();
            String string = curPrice.curPrice(map.get(key).getUnitPrice());
           map.get(key).setCurrencyPrice(string);

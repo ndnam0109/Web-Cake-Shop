@@ -19,8 +19,10 @@ public class LoginController extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-		HttpSession session = req.getSession(false);
-		if (session != null && session.getAttribute("account") != null) {
+		HttpSession session = req.getSession(false);//Trả về sission hiện tại
+		
+		
+		if (session != null && session.getAttribute("account") != null) { 
 			resp.sendRedirect(req.getContextPath() + "/trangchu");
 			return;
 		}
@@ -43,7 +45,7 @@ public class LoginController extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		String userName = req.getParameter("userName");
-		String password = req.getParameter("password");
+		String password = req.getParameter("password"); //Lấy userName và pass từ req
 		boolean isRememberMe = false;
 		String remember = req.getParameter("remember");
 
@@ -56,25 +58,25 @@ public class LoginController extends HttpServlet {
 
 		UserService service = new UserService();
 
-		User user = service.login(userName, password);
+		User user = service.login(userName, password);  //Lấy user từ db
 
-		if (user != null) {
+		if (user != null) { 
 			HttpSession session = req.getSession(true);
-			session.setAttribute("account", user);
-			session.setAttribute("fullname", user.getFullName());
+			session.setAttribute("account", user);   
+			session.setAttribute("fullname", user.getFullName());  //Nếu user khác null thì tạo sisson và set user và fullName vào session
 
 			if (isRememberMe) {
 				saveRemeberMe(resp, userName);
 			}
 			if (user.getRoleId()==1) {
-				resp.sendRedirect(req.getContextPath() + "/admin-trangchu");
+				resp.sendRedirect(req.getContextPath() + "/admin-trangchu");//userId bằng 1 thì trả về trang admin 
 			}else {
-				resp.sendRedirect(req.getContextPath() + "/trangchu");
+				resp.sendRedirect(req.getContextPath() + "/trangchu");  //userId bằng 2 thì trả về trang client
 			}
 
 			
 		} else {
-			alertMsg = "Tên đăng nhập hoặc mật khẩu không đúng!";
+			alertMsg = "Tên đăng nhập hoặc mật khẩu không đúng!";  //user bằng null trả về lỗi ra client
 			req.setAttribute("alert", alertMsg);
 			req.getRequestDispatcher("views/client/login.jsp").forward(req, resp);
 		}
@@ -82,7 +84,7 @@ public class LoginController extends HttpServlet {
 
 	private void saveRemeberMe(HttpServletResponse response, String userName) {
 		Cookie cookie = new Cookie(Constant.COOKIE_REMEMBER, userName);
-		cookie.setMaxAge(30 * 60);
+		cookie.setMaxAge(30 * 60);     //set thời gian sống của cookie
 		response.addCookie(cookie);
 	}
 
