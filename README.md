@@ -1,5 +1,10 @@
 # Web-Cake-Shop
-### E-Commerce Website : A website that displays and sells pastry products
--*written in java java programming language , JSP/Servlet.*
--*built according mvc pattern.*
--*apply  SOLID design principle in project construction.*
+
+### E-Commerce Website : Website that displays and sells pastry products.
+
+ -    *Written in java java programming language , JSP/Servlet.*
+
+
+ - *Built according MVC pattern.*
+
+ - *Apply  SOLID design principle in project construction.*
