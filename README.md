@@ -1,4 +1,4 @@
-# Web-Cake-Shop
+# Web-Cake-Shop Amazing project
 
 ### E-Commerce Website : Website that displays and sells pastry products.
 
